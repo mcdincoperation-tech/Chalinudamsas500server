@@ -1,0 +1,416 @@
+/* App.css */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 50%, #312e81 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+
+.surprise-card {
+  max-width: 32rem;
+}
+
+.card.animating {
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+
+/* Step Indicator */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-dot.active {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+.step-line {
+  width: 2rem;
+  height: 0.125rem;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-line.active {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+/* Content Layout */
+.content-center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-header {
+  margin-bottom: 2rem;
+}
+
+.surprise-content {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Icons */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.icon-large {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+}
+
+.icon-xl {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+}
+
+.icon-medium {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.icon-small {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+/* Typography */
+.title-large {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.title-xl {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.title-medium {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.birthday-info {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.birthday-info p {
+  margin: 0.5rem 0;
+}
+
+.date-info {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 1rem !important;
+}
+
+/* Input Fields */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1.125rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #db2777, #7c3aed);
+  transform: scale(1.05);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 20rem;
+  height: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Music Indicator */
+.music-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Emoji Grid */
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.emoji-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+/* Birthday Message */
+.birthday-message {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2));
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.birthday-message p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Background Elements */
+.surprise-bg {
+  position: relative;
+}
+
+.bg-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  animation: pulse 2s infinite;
+}
+
+.star-icon {
+  width: 1rem;
+  height: 1rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Confetti */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confetti-piece {
+  position: absolute;
+  animation: bounce 3s infinite;
+  font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Classes */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.spinning {
+  animation: spin 2s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .title-large {
+    font-size: 1.875rem;
+  }
+  
+  .title-xl {
+    font-size: 2rem;
+  }
+  
+  .title-medium {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .progress-container {
+    width: 100%;
+  }
+  
+  .emoji-grid {
+    gap: 0.5rem;
+  }
+  
+  .emoji-card {
+    padding: 0.75rem;
+    font-size: 1.5rem;
+  }
+}
